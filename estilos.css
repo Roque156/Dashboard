@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.lista{
+    list-style: none;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cabezera{
+    display: flex;
+    justify-content: space-between;
+}
+.jumbotron{
+    width: 100vh;
+    height: 400px;
+    background-image: url(museo.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
