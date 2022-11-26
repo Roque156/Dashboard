@@ -1,6 +1,6 @@
 //Declaracion de variables
 const menuUI=document.querySelector('.menu');
-const resultado = '';
+let c=0;
 
 document.addEventListener('DOMContentLoaded',getimg);
 
@@ -8,20 +8,38 @@ document.addEventListener('DOMContentLoaded',getimg);
 async function getimg (){
     
     let randomNumber = Math.ceil(Math.random()*1000);
-    const respuesta = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomNumber}`);
-    const resultado = await respuesta.json();
+    const respuesta = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomNumber}`)
+    //const resultado = await respuesta.json();
 
-    respuesta.then (response=> {
+    .then (response=> {
 
         let estado = response.status;
-        console.log (estado);
-        if(estado === 200 ){
-            console.log('exitoso');
-        
-        }else{
-            console.log('falla');
-            getimg();
-        }
+        //let datos = response.json();
+
+        //console.log (estado);
+        //console.log (response.json());
+        /*const resultado = response.json()
+        .then(response=>{
+            console.log(resultado);
+        })*/
+        /*console.log(*/response.json()/*)*/
+        .then(data=>{   
+            /*console.log(data);
+            console.log(estado);*/
+            if(estado ==200 && !data.primaryImage =="" || !data.primaryImage == undefined ){
+                /*console.log(data.primaryImage);
+                console.log(estado);*/
+                if(c<6){
+                    c++;
+                    console.log(data.primaryImage);
+                    getimg();
+                }
+            }else{
+                console.log(data.primaryImage + " " + 'no existe');
+                console.log(estado);
+                getimg();
+            }
+        });
    
        })
    
