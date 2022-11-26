@@ -26,17 +26,20 @@ async function getimg (){
         .then(data=>{   
             /*console.log(data);
             console.log(estado);*/
-            if(estado ==200 && !data.primaryImage =="" || !data.primaryImage == undefined ){
+            if(estado == 200 && !data.primaryImage == "" || !data.primaryImage == undefined ){
                 /*console.log(data.primaryImage);
                 console.log(estado);*/
                 if(c<6){
                     c++;
                     console.log(data.primaryImage);
+                    menuUI.innerHTML +=`
+                    <img width="200px" src='${data.primaryImage}'>             
+                    `
                     getimg();
                 }
             }else{
-                console.log(data.primaryImage + " " + 'no existe');
-                console.log(estado);
+                /*console.log(data.primaryImage + " " + 'no existe');
+                console.log(estado);*/
                 getimg();
             }
         });
@@ -62,7 +65,7 @@ async function getimg (){
 
    });*/
 
-            console.log(randomNumber);
+            //console.log(randomNumber);
 
             //console.log(resultado.primaryImage);
     
