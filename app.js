@@ -21,14 +21,15 @@ async function getimg (){
         response.json()
         .then(data=>{   
             
-            if(estado == 200 && !data.primaryImageSmall == "" || !data.primaryImageSmall == undefined){
+            if(estado == 200 && !data.primaryImageSmall == "" || !data.primaryImageSmall == undefined
+                && !data.artistDisplayName == "" || !data.artistDisplayName == undefined ){
         
                 if(c<6){
                     c++;
                     menuUI.innerHTML +=`
                     <div class = "destacados">
                         <img src='${data.primaryImageSmall}'>
-                        <h4 class="descripcion">'${data.title}'</h4>
+                        <h4 class="artista">'${data.artistDisplayName}'</h4>
                     </div>
                     `
                     getimg();

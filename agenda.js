@@ -1,3 +1,5 @@
+//Declaracion de variables
+
 let w=0;
 const agenUI = document.querySelector('.agenda');
 
@@ -18,7 +20,7 @@ export const getAge = async ()=>{
                 if(w<3){
                     w++;
                     agenUI.innerHTML +=`
-                    <img width="200px" src='${data.primaryImageSmall}'>             
+                    <img width="200px" src='${data.primaryImageSmall}'>         
                     `
                     getAge();
                 }

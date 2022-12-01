@@ -58,6 +58,23 @@ a{
     border-radius: 15px;
     cursor:pointer;
 }
-.descripcion{
+.artista{
     text-align: center;
+}
+.temporales{
+    margin:0px auto;
+    width: 70%;
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 150px 1fr;
+}
+#temp{
+    grid-column: 1 / -1;
+}
+.temporal >img{
+    width: 100%;
+    height: 90%;
+    border-radius: 15px;
+    cursor:pointer;
 }

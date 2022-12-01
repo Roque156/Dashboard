@@ -1,3 +1,5 @@
+//Declaracion de variables
+
 let t=0;
 const temporalUI = document.querySelector('.temporales');
 
@@ -12,12 +14,16 @@ export const getTemp = async ()=>{
         response.json()
         .then(data=>{   
             
-            if(estado == 200 && !data.primaryImageSmall == "" || !data.primaryImageSmall == undefined ){
+            if(estado == 200 && !data.primaryImageSmall == "" || !data.primaryImageSmall == undefined 
+                && data.artistDisplayBio == "" || !data.artistDisplayBio == undefined){
         
                 if(t<2){
                     t++;
                     temporalUI.innerHTML +=`
-                    <img width="200px" src='${data.primaryImageSmall}'>             
+                    <div class="temporal">
+                        <img width="200px" src='${data.primaryImageSmall}'>
+                        <h4 class="bio">'${data.artistDisplayBio}'</h4>    
+                    </div>
                     `
                     getTemp();
                 }
