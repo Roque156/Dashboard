@@ -20,7 +20,11 @@ export const getAge = async ()=>{
                 if(w<3){
                     w++;
                     agenUI.innerHTML +=`
-                    <img width="200px" src='${data.primaryImageSmall}'>         
+                    <div class="contenido">
+                            <img width="350px" height="500px" src='${data.primaryImageSmall}'>         
+                            <h4 class="text">'${data.classification}'</h4>
+                            <h4 class="text">'${data.title}'</h4>
+                    </div>
                     `
                     getAge();
                 }

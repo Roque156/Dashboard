@@ -21,8 +21,9 @@ export const getTemp = async ()=>{
                     t++;
                     temporalUI.innerHTML +=`
                     <div class="temporal">
-                        <img width="200px" src='${data.primaryImageSmall}'>
-                        <h4 class="bio">'${data.artistDisplayBio}'</h4>    
+                        <img src='${data.primaryImageSmall}'>
+                        <h4 class="bio">'${data.department}'</h4>
+                        <h4 class="bio">'${data.title}'</h4>
                     </div>
                     `
                     getTemp();

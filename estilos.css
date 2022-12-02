@@ -78,3 +78,35 @@ a{
     border-radius: 15px;
     cursor:pointer;
 }
+.bio{
+    text-align: center;
+}
+.agenda{
+    margin:0px auto;
+    margin-left: 120px;
+    width: 70%;
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: 150px 1fr;
+}
+#age{
+    grid-column: 1 / -1;
+}
+.agenda >img{
+    width: 100%;
+    height: 90%;
+    border-radius: 55px;
+    cursor:pointer;
+}
+.pie{
+    background-color: black;
+    height: 200px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.pie >div{
+    margin-top: 30px;
+}
