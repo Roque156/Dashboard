@@ -24,6 +24,8 @@ export const getAge = async ()=>{
                             <img width="350px" height="500px" src='${data.primaryImageSmall}'>         
                             <h4 class="text">'${data.classification}'</h4>
                             <h4 class="text">'${data.title}'</h4>
+                            <h5>DICIEMBRE -22 / ENERO-23</h5>
+                            <a href="">Leer mas...</>
                     </div>
                     `
                     getAge();
